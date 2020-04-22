@@ -76,22 +76,21 @@
 %\setlength{\parskip}{0pt}
 %\setlength{\parsep}{0pt}
 %\setlength{\headsep}{0pt}
-%\setlength{\topskip}{0pt}
+\setlength{\topskip}{0pt}
 %\setlength{\topmargin}{0pt}
 %\setlength{\topsep}{0pt}
 %\setlength{\partopsep}{0pt}
-%\linespread{0.8}
-%\usepackage[compact]{titlesec}
-%\titlespacing{\section}{0pt}{*0}{*0}
-%\titlespacing{\subsection}{0pt}{*0}{*0}
-%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+%\linespread{0.7}
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
 %\usepackage{savetrees} %(alternative)
 
 % Use custom numbering
 %\setcounter{secnumdepth}{0}
 
-\title{Analysis}
-\date{}
+\usepackage{centernot}
 
 \begin{document}
 
@@ -104,11 +103,7 @@
 \begin{multicols*}{4}
 \raggedcolumns
 
-\maketitle
-
-\setcounter{tocdepth}{2}
-%\tableofcontents
-
+\include{RandomStuff}
 \include{FolgenReihen}
 \include{StetigeFunktionen}
 

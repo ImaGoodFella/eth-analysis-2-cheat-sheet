@@ -1,16 +1,16 @@
-\newcommand{\emptyarg}[1][]{\ifthenelse{\isempty{#1}}{}{\ (#1)}}
+\newcommand{\emptyarg}[1][]{\ifthenelse{\isempty{#1}}{}{\ #1}}
 
 % % % % %
 % Structural
 % % % % %
 
-\newcommand{\Def}[1][]{\colorbox{defcolor}{\color{titlecolor}{\textbf{Def.\emptyarg[#1]}}}\kern+0.3ex}
+\newcommand{\Def}[1][]{\colorbox{defcolor}{\color{titlecolor}{\textbf{D\emptyarg[#1]}}}\kern+0.3ex}
 
-\newcommand{\Satz}[1][]{\colorbox{thmcolor}{\color{titlecolor}{\textbf{Thm.\emptyarg[#1]}}}\kern+0.3ex}
+\newcommand{\Satz}[1][]{\colorbox{thmcolor}{\color{titlecolor}{\textbf{T\emptyarg[#1]}}}\kern+0.3ex}
 
-\newcommand{\Lemma}[1][]{\colorbox{thmcolor}{\color{titlecolor}{\textbf{Lem.\emptyarg[#1]}}}\kern+0.3ex}
+\newcommand{\Lemma}[1][]{\colorbox{thmcolor}{\color{titlecolor}{\textbf{L\emptyarg[#1]}}}\kern+0.3ex}
 
-\newcommand{\Korollar}[1][]{\colorbox{thmcolor}{\color{titlecolor}{\textbf{Kor.\emptyarg[#1]}}}\kern+0.3ex}
+\newcommand{\Korollar}[1][]{\colorbox{thmcolor}{\color{titlecolor}{\textbf{K\emptyarg[#1]}}}\kern+0.3ex}
 
 \newcommand{\Trick}[1][]{\colorbox{trkcolor}{\color{titlecolor}{\textbf{Trick:\emptyarg[#1]}}}\kern+0.3ex}
 
@@ -74,6 +74,8 @@
 \newcommand{\diag}{\operatorname{diag}}
 
 \newcommand{\hl}[1]{\colorbox{black!7}{$#1$}}
+
+\newcommand{\notimplies}{\;\not\!\!\!\implies}
 
 % % % % %
 % Layout

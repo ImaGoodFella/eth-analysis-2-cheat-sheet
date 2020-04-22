@@ -1,22 +1,37 @@
-\part{Folgen und Reihen}
+\section{Folgen und Reihen}
 
-\section{Konvergenz von Folgen}
-
-% Definition 1
-\Def[1] Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls
+\Def[2.1.1] Eine \textbf{Folge} $a_n$ ist eine Abbildung
 \[
-\forall \epsilon > 0 \ \exists N=N(\epsilon)\in\N, \ \forall n\geq
-N \colon \abs{a_n-a} < \epsilon.
-\]
-Für $\R^d$ muss gelten $\norm{a_n-a} < \epsilon$.
+a: \mathbf{N}^{*} \longrightarrow \mathbf{R}
+\] 
+\subsection{Konvergenz von Folgen}
 
-% Definition 2
-\Def[2] Eine Folge $a_n$ \emph{konvergiert} gegen $a\in \R$, falls es $l \in \R$ gibt, so dass $\forall \epsilon > 0$ die Menge \\
+\Def[2.1.4] Eine Folge $a_n$ heisst \textbf{konvergent}, falls es $a \in \R$ gibt, so dass $\forall \epsilon > 0$ die Menge
 $
-\left\{n \in \mathbf{N}^{*}: a_{n} \notin\right] l-\varepsilon, l+\varepsilon[\}
+\left\{n \in \mathbf{N}^{*}: a_{n} \notin\right] a-\varepsilon, a+\varepsilon[\}
 $ endlich ist.
+\Lemma[2.1.3] Dieses $a$ ist \textbf{eindeutig}. \\
+
+\Lemma[2.1.5] Jede konvergente Folge ist \textbf{beschränkt}. \\
+\Achtung $a_{n}$ beschränkt $\centernot\implies a_{n}$ konvergent! \\
+
+\Lemma[2.1.6] Eine Folge $a_n$ \textbf{konvergiert} gegen ${a = \lim\limits_{n \rightarrow \infty} a_{n}}$, falls $ \forall \epsilon > 0 \ \exists N \geq 1$ so dass $\ \forall n\geq N$
+\[
+ \abs{a_n-a} < \epsilon.
+\]
 
 \sep
+
+\Satz[2.1.8] Seien $a_n$ und $b_n$ konvergente Folgen mit $a = \lim\limits_{n \rightarrow \infty} a_{n}$ und  $b = \lim\limits_{n \rightarrow \infty} b_{n}$
+\begin{enumerate}
+\item[1)] Dann ist $\lim\limits_{n \rightarrow \infty} (a_{n} + b_{n}) = a + b$
+\item[2)] Dann ist $\lim\limits_{n \rightarrow \infty} (a_{n} \cdot b_{n}) = a \cdot b$
+\item[3)] Dann ist $\lim\limits_{n \rightarrow \infty} (\frac{a_{n}}{b_{n}} = \frac{a}{b})$ $(b_{n} \neq 0 \ \forall n \geq 1)$
+\item[4)] $\exists K \geq 1 \ \forall n \geq K \ a_{n} \leq b_{n} \implies a \leq b$
+
+\end{enumerate}
+
+\subsection{Der Satz von Weierstrass}
 
 % Monotone Konvergenz
 \Satz[Monotone] Sei $\left(a_{n}\right)_{n \geqslant 1}$ monoton fallend und nach unten beschränkt. Dann konvergiert
@@ -32,7 +47,7 @@ $.
 \Satz[Sandwich] Die Folge $\left(a_{n}\right)_{n \geqslant 1}$ konvergiert zu $a$, falls $\left(b_{n}\right)_{n \geqslant 1}, \left(c_{n}\right)_{n \geqslant 1}$ existieren mit Grenzwert $a$ und $\forall n\geq1 : b_n \leq a_n \leq c_n$.
 
 
-\section{Konvergenz von Reihen}
+\subsection{Konvergenz von Reihen}
 
 % Absolute Convergence
 \Def Die Reihe $\sum_{k=1}^{\infty} a_{k}$ konvergiert absolut ($\Rightarrow$ konvergent), falls $\sum\limits_{k=1}^{\infty} \abs{a_{k}}$ kovergiert.
@@ -56,7 +71,7 @@ $$S:=\sum_{k=1}^{\infty}(-1)^{k+1} a_{k}$$ und es gilt $a_{1}-a_{2} \leqslant S 
 % % % % %
 % TRICKS
 % % % % %
-\section{Andere Aussagen}
+\subsection{Andere Aussagen}
 \Lemma (Bernouilli) $(1+x)^{n} \geqslant 1+n \cdot x \quad \forall n \in \N, x>-1$.
 
 % Bolzano Weierstrass
