@@ -26,28 +26,83 @@ $ endlich ist.
 \begin{enumerate}
 \item[1)] Dann ist $\lim\limits_{n \rightarrow \infty} (a_{n} + b_{n}) = a + b$
 \item[2)] Dann ist $\lim\limits_{n \rightarrow \infty} (a_{n} \cdot b_{n}) = a \cdot b$
-\item[3)] Dann ist $\lim\limits_{n \rightarrow \infty} (\frac{a_{n}}{b_{n}} = \frac{a}{b})$ $(b_{n} \neq 0 \ \forall n \geq 1)$
+\item[3)] Dann ist $\lim\limits_{n \rightarrow \infty} (\frac{a_{n}}{b_{n}}) = \frac{a}{b}$ $(b_{n} \neq 0 \ \forall n \geq 1)$
 \item[4)] $\exists K \geq 1 \ \forall n \geq K \ a_{n} \leq b_{n} \implies a \leq b$
 
 \end{enumerate}
 
+\Satz[Sandwich Satz] Sei $\lim\limits_{n \rightarrow \infty} a_{n} = \lim\limits_{n \rightarrow \infty} b_{n} = \alpha$ 
+\[
+a_{n} \leq c_{n} \leq b_{n} \ \forall n \geq K \implies \lim\limits_{n \rightarrow \infty} c_{n} = \alpha
+\]
+
+Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \sep
 
-\subsection{Der Satz von Weierstrass}
+\subsection{Weierstrass und Anwendungen}
 
-% Monotone Konvergenz
-\Satz[Monotone] Sei $\left(a_{n}\right)_{n \geqslant 1}$ monoton fallend und nach unten beschränkt. Dann konvergiert
-$\left(a_{n}\right)_{n \geqslant 1}$ mit Grenzwert
-$
-\lim _{n \rightarrow \infty} a_{n}=\inf \left\{a_{n}: n \geqslant 1\right\}
-$.
+\Def[2.2.1] Die Folge $a_{n}$ ist
+\begin{enumerate}
+\item[1)] \textbf{monoton wachsend}  falls ${a_{n} \leq a_{n + 1} \ \forall n \geq 1}$
+\item[2)] \textbf{monoton fallend} falls ${a_{n} \geq a_{n + 1} \ \forall n \geq 1}$
+\end{enumerate}
 
-% Cauchy
-\Satz[Cauchy] Die Folge $\left(a_{n}\right)_{n \geqslant 1}$ ist genau dann konvergent, falls $\forall \varepsilon>0 \quad \exists N \geqslant 1 \quad$ so dass $\quad\left|a_{n}-a_{m}\right|<\varepsilon \quad \forall n, m \geqslant N$
+\Satz[2.2.2 (Weierstrass)] Falls die Folge $a_{n}$ 
+\begin{enumerate}
+\item[1)] \textit{monoton wachsend} und \textit{nach oben beschränkt} ist, dann \textbf{konvergiert} $a_{n}$ mit Grenzwert
+\[ 
+\lim\limits_{n \rightarrow \infty} a_{n} = \text{sup}\{a_{n} \: n \geq 1\}
+\]
+\item[2)] \textit{monoton fallend} und \textit{nach unten beschränkt} ist, dann \textbf{konvergiert} $a_{n}$ mit Grenzwert
+\[ 
+\lim\limits_{n \rightarrow \infty} a_{n} = \text{inf}\{a_{n} \: n \geq 1\}
+\]
+\end{enumerate}
+\Bsp[2.2.3] $\lim\limits_{n \rightarrow \infty} n^{a}q^{n} = 0, \ 0 \leq q \leq 1, \ a \in \Z$ \\
+\Bsp[2.2.5] $\lim\limits_{n \rightarrow \infty} \sqrt[n]{n} = 1$ \\
+\Lemma[2.2.7 (Bernoulli Ungleichung)]
+\[
+(1 + x)^{n+1} \geq 1 + n \cdot x \ \ \forall n \in \N, x > -1
+\] 
 
-% Sandwich
-\Satz[Sandwich] Die Folge $\left(a_{n}\right)_{n \geqslant 1}$ konvergiert zu $a$, falls $\left(b_{n}\right)_{n \geqslant 1}, \left(c_{n}\right)_{n \geqslant 1}$ existieren mit Grenzwert $a$ und $\forall n\geq1 : b_n \leq a_n \leq c_n$.
+\sep
 
+\subsection{Limes superior und inferior}
+
+\Def[2.3.0]
+\[
+\liminf\limits_{n \rightarrow \infty} a_{n} = \lim\limits_{n \rightarrow \infty} b_{n}, \ \ (b_{n} = \text{inf} \{a_{k} : k \geq n \})
+\]
+\[
+\limsup\limits_{n \rightarrow \infty} a_{n} = \lim\limits_{n \rightarrow \infty} c_{n}, \ \ (c_{n} = \text{sup} \{a_{k} : k \geq n \})
+\]
+
+\Lemma[2.4.1] Die Folge $a_{n}$ konvergiert genau dann, falls
+\begin{enumerate}
+\item[1.] $a_{n}$ beschränkt ist
+\item[2.] $\liminf\limits_{n \rightarrow \infty} a_{n} = \liminf\limits_{n \rightarrow \infty} a_{n}$
+\end{enumerate}
+
+\sep 
+
+\subsection{Cauchy Kriterium}
+
+\Satz[2.4.2 (Cauchy Kriterium)] Die Folge $a_{n}$ ist genau dann konvergent
+\[
+\forall \epsilon > 0 \ \exists N \geq 1 \text{ so dass } \abs{a_{n} - a_{m}} \ \ \forall n, m \geq N
+\]
+
+\sep
+
+\subsection{Bolzano-Weierstrass}
+
+\Def[2.5.1] Ein abgeschlossenes Intervall $I \subset \R$ 
+\begin{enumerate}
+\item[1)] $\left[ a, b \right]$, $a \leq b, a, b \in \R$
+\item[2)] $\left[ a, +\infty \right[$, $a \in \R$
+\item[3)] $\left] -\infty, a \right]$, $a \in \R$
+\item[4)] $\left] -\infty, +\infty \right] = \R$
+\end{enumerate}
 
 \subsection{Konvergenz von Reihen}
 
