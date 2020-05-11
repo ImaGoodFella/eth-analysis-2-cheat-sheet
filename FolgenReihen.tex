@@ -1,7 +1,7 @@
 \sep
 \section{Folgen und Reihen}
 
-\Def[2.1.1] Eine \textbf{Folge} $a_n$ ist eine Abbildung
+\Def[2.1.1] Eine \textbf{Folge} $a_n$ in $\mathbf{R}$ ist eine Abbildung
 \[
 a: \mathbf{N}^{*} \longrightarrow \mathbf{R}
 \] 
@@ -17,7 +17,7 @@ $ endlich ist.
 \Lemma[2.1.5] Jede konvergente Folge ist \textbf{beschränkt}. \\
 \Achtung $a_{n}$ beschränkt $\centernot\implies a_{n}$ konvergent! \\
 
-\Lemma[2.1.6] Eine Folge $a_n$ \textbf{konvergiert} gegen ${a = \lim\limits_{n \rightarrow \infty} a_{n}}$, falls $ \forall \epsilon > 0 \ \exists N \geq 1$ so dass $\ \forall n\geq N$
+\Lemma[2.1.6] Eine Folge $a_n$ \textbf{konvergiert} gegen ${a = \lim\limits_{n \rightarrow \infty} a_{n}}$, falls $ \forall \epsilon > 0 \ \exists N \geq 0$ so dass $\ \forall n\geq N$
 \[
  \abs{a_n-a} < \epsilon.
 \]
@@ -26,8 +26,8 @@ $ endlich ist.
 \begin{enumerate}
 \item[1)] Dann ist $\lim\limits_{n \rightarrow \infty} (a_{n} + b_{n}) = a + b$
 \item[2)] Dann ist $\lim\limits_{n \rightarrow \infty} (a_{n} \cdot b_{n}) = a \cdot b$
-\item[3)] Dann ist $\lim\limits_{n \rightarrow \infty} (\frac{a_{n}}{b_{n}}) = \frac{a}{b}$ $(b_{n} \neq 0 \ \forall n \geq 1)$
-\item[4)] $\exists K \geq 1 \ \forall n \geq K \ a_{n} \leq b_{n} \implies a \leq b$
+\item[3)] Dann ist $\lim\limits_{n \rightarrow \infty} (\frac{a_{n}}{b_{n}}) = \frac{a}{b}$ $(b_{n} \neq 0 \ \forall n \geq 0)$
+\item[4)] $\exists K \geq 0 \ \forall n \geq K \ a_{n} \leq b_{n} \implies a \leq b$
 
 \end{enumerate}
 
@@ -41,24 +41,24 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 
 \subsection{Weierstrass und Anwendungen}
 
-\Def[2.2.1] Die Folge $a_{n}$ ist
+\Def[2.2.1] Falls  $a_{n}$ ist
 \begin{enumerate}
-\item[1)] \textbf{monoton wachsend}  falls ${a_{n} \leq a_{n + 1} \ \forall n \geq 1}$
-\item[2)] \textbf{monoton fallend} falls ${a_{n} \geq a_{n + 1} \ \forall n \geq 1}$
+\item[1)] \textbf{monoton wachsend}  falls ${a_{n} \leq a_{n + 1} \ \forall n \geq 0}$
+\item[2)] \textbf{monoton fallend} falls ${a_{n} \geq a_{n + 1} \ \forall n \geq 0}$
 \end{enumerate}
 
-\Satz[2.2.2 (Weierstrass)] Falls die Folge $a_{n}$ 
+\Satz[2.2.2 (Weierstrass)] Genau dann, wenn $a_{n}$ 
 \begin{enumerate}
 \item[1)] \textit{monoton wachsend} und \textit{nach oben beschränkt} ist, dann \textbf{konvergiert} $a_{n}$ mit Grenzwert
 \[ 
-\lim\limits_{n \rightarrow \infty} a_{n} = \text{sup}\{a_{n} \: n \geq 1\}
+\lim\limits_{n \rightarrow \infty} a_{n} = \text{sup}\{a_{n} \: n \geq 0\}
 \]
 \item[2)] \textit{monoton fallend} und \textit{nach unten beschränkt} ist, dann \textbf{konvergiert} $a_{n}$ mit Grenzwert
 \[ 
-\lim\limits_{n \rightarrow \infty} a_{n} = \text{inf}\{a_{n} \: n \geq 1\}
+\lim\limits_{n \rightarrow \infty} a_{n} = \text{inf}\{a_{n} \: n \geq 0\}
 \]
 \end{enumerate}
-\Bsp[2.2.3] $\lim\limits_{n \rightarrow \infty} n^{a}q^{n} = 0, \ 0 \leq q \leq 1, \ a \in \Z$ \\
+\Bsp[2.2.3] $\lim\limits_{n \rightarrow \infty} n^{a}q^{n} = 0, \ 0 \leq q < 1, \ a \in \Z$ \\
 \Bsp[2.2.5] $\lim\limits_{n \rightarrow \infty} \sqrt[n]{n} = 1$ \\
 \Lemma[2.2.7 (Bernoulli Ungleichung)]
 \[
@@ -80,16 +80,16 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \Lemma[2.4.1] Die Folge $a_{n}$ konvergiert genau dann, falls
 \begin{enumerate}
 \item[1.] $a_{n}$ beschränkt ist
-\item[2.] $\liminf\limits_{n \rightarrow \infty} a_{n} = \liminf\limits_{n \rightarrow \infty} a_{n}$
+\item[2.] $\limsup\limits_{n \rightarrow \infty} a_{n} = \liminf\limits_{n \rightarrow \infty} a_{n}$
 \end{enumerate}
 
 \sep 
 
 \subsection{Cauchy Kriterium}
 
-\Satz[2.4.2 (Cauchy Kriterium)] Die Folge $a_{n}$ ist genau dann konvergent
+\Satz[2.4.2 (Cauchy Kriterium)] Die Folge $a_{n}$ ist genau dann konvergent und heisst Cauchy-Folge
 \[
-\forall \epsilon > 0 \ \exists N \geq 1 \text{ so dass } \abs{a_{n} - a_{m}} \ \ \forall n, m \geq N
+\forall \epsilon > 0 \ \exists N \geq 0 \text{ so dass } \abs{a_{n} - a_{m}} \ \ \forall n, m \geq N
 \]
 
 \sep
@@ -104,35 +104,141 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \item[4)] $\left] -\infty, +\infty \right] = \R$
 \end{enumerate}
 
-\subsection{Konvergenz von Reihen}
+Die Länge eines $\mathcal{L}(I)$ ist definiert als:
+\begin{enumerate} 
+\item[•] $\mathcal{L}(I) = b - a$   \quad im ersten Fall
+\item[•] $\mathcal{L}(I) = \infty$  \qquad in (2), (3), (4)
+\end{enumerate}
+\sep
 
-% Absolute Convergence
-\Def Die Reihe $\sum_{k=1}^{\infty} a_{k}$ konvergiert absolut ($\Rightarrow$ konvergent), falls $\sum\limits_{k=1}^{\infty} \abs{a_{k}}$ kovergiert.
+\Satz[2.5.5 (Cauchy-Cantor)]
+\\ Sei ${I_{1} \subseteq I_{2} \subseteq \cdots I_{n} \subseteq \cdots}$ eine Folge abgeschlossener Intervall mit $\mathcal{L}(I_{1}) < +\infty$. Dann gilt
+\[ {\bigcap}_{n\geq1} I_{n} \neq \emptyset \]
+\[ \lim\limits_{n \rightarrow \infty} \mathcal{L}(I_{n}) = 0 \implies \abs{{\bigcap}_{n\geq1} I_{n}} = 1\]
 
-% Cauchy
-\Satz[Cauchy] Die Reihe $\sum_{k=1}^{\infty} a_{k}$ ist genau dann konvergent, falls. $\forall \varepsilon>0 \quad \exists N \geqslant 1 \quad$ mit $\quad\left|\sum\limits_{k=n}^{m} a_{k}\right|<\varepsilon \quad \forall m \geqslant n \geqslant N$
+\Satz[2.5.6] $\R$ ist nicht \textbf{abzählbar}.
 
-% Quotientenkriterum
-\Satz[Ratio] Sei $\left(a_{n}\right)_{n \geqslant 1}$ mit $a_{n} \neq 0 \quad \forall n \geqslant 1 .$ Falls 
-$$\limsup\limits_{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}<1$$ dann konvergiert die Reihe absolut.
-Falls $\liminf\limits_{n \rightarrow \infty}\square > 1$ divergiert die Reihe.
+\sep
 
-% Wurzelkriterum
-\Satz[Root] Falls $$\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1$$ dann konvergiert $\sum_{n=1}^{\infty} a_{n}$ absolut. Falls $\square > 1$, dann divergiert die Reihe.
+\Def[2.5.7] $b_{n}$ ist eine Teilfoge von $a_{n}$, falls 
+\[b_{n} = a_{l(n)}, \quad l : \mathbf{N}^{*} \rightarrow \mathbf{N}^{*} \text{ und } l(n) > l(n + 1) \]
 
-% Alternierende Reihe
-\Satz[Alternating] Sei $\left(a_{n}\right)_{n \geqslant 1}$ monoton fallend mit $a_{n} \geqslant 0 \quad \forall n \geqslant 1$ und $\lim \limits_{n \rightarrow \infty} a_{n}=0 .$ Dann konvergiert 
-$$S:=\sum_{k=1}^{\infty}(-1)^{k+1} a_{k}$$ und es gilt $a_{1}-a_{2} \leqslant S \leqslant a_{1}$.
+\Satz[2.5.9 (Bolzano-Weierstrass)] Für jede beschränkte Folge existiert eine konvergente Teilfolge.
 
+\sep
 
-% % % % %
-% TRICKS
-% % % % %
-\subsection{Andere Aussagen}
-\Lemma (Bernouilli) $(1+x)^{n} \geqslant 1+n \cdot x \quad \forall n \in \N, x>-1$.
+\subsection{Folgen in $R^{d}$ und C}
 
-% Bolzano Weierstrass
-\Satz[Teilfolge] Jede beschränkte Folge besitzt eine konvergente Teilfolge.
+\Def[2.6.1] Eine \textbf{Folge} $a_n$ in $\mathbf{R^{d}}$ ist eine Abbildung
+\[
+a: \mathbf{N}^{*} \longrightarrow \mathbf{R^{d}}
+\] 
 
-% R^d
-\Satz[Vektorfolge] $\lim \limits_{n \rightarrow \infty} a_{n}=b$ genau dann wenn $\lim \limits_{n \rightarrow \infty} a_{n, j}=b_{j} \quad \forall 1 \leqslant j \leqslant d$.
+\Def[2.6.2] Eine Folge $a_n$ in $\mathbf{R^{d}}$ konvergiert gegen ${a = \lim\limits_{n \rightarrow \infty} a_{n}}$, falls $ \forall \epsilon > 0 \ \exists N \geq 0$ so dass $\ \forall n\geq N$
+\[
+ \norm{a_n-a} < \epsilon.
+\]
+\sep
+
+\subsection{Reihen}
+
+\Def[2.7.0] Eine Reihe ist eine unendliche Summe
+\[S_{n} := a_{1} + a_{n} \cdots = \sum_{k=0}^{n} a_{k}\]
+
+\Def[2.7.1] Die Reihe $\sum_{k=1}^{n} a_{k}$ ist \textbf{konvergent}, falls die Folge der Partialsummen konvergiert. 
+\[\sum_{k=0}^{\infty} a_{k} = \lim\limits_{n \rightarrow \infty} S_{n} \]
+
+\Bsp[2.7.2 (Geometrische Reihe)] Sei $\abs{q} < 1$
+\[\sum_{k=0}^{\infty} q^k = \frac{1}{1-q} \]
+
+\Satz[2.7.4] Seien $\sum_{k=0}^{\infty} a_{k}$ und $\sum_{k=0}^{\infty} b_{k}$ konvergent
+\begin{enumerate}
+\item[(1)] $\sum_{k=0}^{\infty} (a_{k} + b_{k}) = \sum_{k=0}^{\infty} a_{k} + \sum_{k=0}^{\infty} a_{k}$ 
+\item[(2)] $\sum_{k=0}^{\infty} \alpha \cdot a_{k} = \alpha \cdot \sum_{k=0}^{\infty} a_{k}$
+\end{enumerate}
+
+\sep
+
+\Satz[2.7.5 (Cauchy Kriterium)] $\sum_{k=0}^{\infty} a_{k}$ ist genau dann konvergent, falls
+\[ \forall \epsilon > 0 \ \exists n \geq 0 \text{ mit } \abs{\sum_{k=n}^{m} a_{k}} < \epsilon \quad \forall m \geq n \geq N\]
+
+\Satz[2.7.6] Sei $\sum_{k=0}^{\infty} a_{k}$ mit $a_{k} \geq  0 \ \forall k \in \mathbf{N}^{*}$. Dann konvergiert
+$\sum_{k=0}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=0}^{n} a_{k}$ nach oben beschränkt ist
+
+\sep
+
+\Korollar[2.7.7 (Vergleichssatz)] Seien $\sum_{k=0}^{\infty} a_{k}$ und $\sum_{k=0}^{\infty} b_{k}$ Reihen mit: $0 \leq a_{k} \leq b_{k} \quad \forall k \geq 0. $
+\[ \sum_{k=0}^{\infty} b_{k} \text{ konvergent} \implies \sum_{k=0}^{\infty} a_{k} \text{ konvergent} \]
+\[ \sum_{k=0}^{\infty} a_{k} \text{ divergent} \implies \sum_{k=0}^{\infty} b_{k} \text{ divergent} \]
+
+\sep
+
+\Satz[2.7.9] $\sum_{k=0}^{\infty} a_{k}$ heisst \textbf{absolut konvergent}, 
+\[ \text{falls } \sum_{k=0}^{\infty} \abs{a_{k}} \text{ konvergiert} \]
+
+\Satz[2.7.10] Eine absolut konvergente Reihe $\sum_{k=0}^{\infty} a_{k}$ ist auch konvergent und es gilt:
+\[ \abs{\sum_{k=0}^{\infty} a_{k}} \leq \sum_{k=0}^{\infty} \abs{a_{k}}\]
+
+\sep
+
+\Satz[2.7.12 Leibniz] Sei $a_{n}$ monoton fallend mit $a_{n} \geq 0 \ \forall n \geq 0, \ \lim\limits_{n \rightarrow \infty} a_{n} = 0.$ Dann konvergiert
+\[ S :=  \sum_{k=0}^{\infty} (-1)^{k+1} a_{k} \text{ und } a_{1} - 1_{2} \leq S \leq {a_1} \]
+\sep
+
+\Def[2.7.14] Eine Reihe  $\sum_{k=0}^{\infty} a'_{n}$ ist eine Umordung der Reihe  $\sum_{k=0}^{\infty} a_{n}$, falls es eine bijektive Abbildung $\phi : \N^{*} \rightarrow \N^{*}$ mit $a'_{n} = a_{\phi(n)}$ 
+
+\Satz[2.7.16 Dirichlet] Falls $\sum_{k=0}^{\infty} a_{n}$ absolut konvergiert, dann konvergiert jede Umordnung der Riehe und hat denselben Grenzwert.  
+
+\Satz[Riemann] Sei $\sum_{k=0}^{\infty} a_{n}$ eine konvergente, aber nicht absolut konvergente Riehe, dann gibt es zu jedem $A \in \R \cup \{\pm \infty\}$ eine Umordnung der Reihe, die gegen A konvergiert. 
+
+\sep
+
+\Satz[Quotientenkriterium] Sei $a_{n} \neq 0 \ \forall n \geq 0$
+\[\limsup\limits_{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}<1 \implies \sum_{n=0}^{\infty} a_{n} \ \text{konvergiert absolut}\]
+\[\limsup\limits_{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}>1 \implies \sum_{n=0}^{\infty} a_{n} \ \text{divergiert} \quad \quad \quad \quad\]
+
+\sep
+
+\Satz[Wurzelkriterium] 
+\[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1 \implies \sum_{n=0}^{\infty} a_{n} \text{ konvergiert absolut} \]
+\[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}>1 \implies \sum_{n=0}^{\infty} a_{n} \text{ divergiert} \quad \quad \quad \quad \]
+
+\Korollar[2.7.21] Die Potenzreihe $\sum_{k=0}^{\infty} c_{k}$ konvergiert für alle $\abs{z} < \rho$ und divergiert für alle $\abs{z} > \rho$
+\[\rho =\begin{cases}
+\quad \quad + \infty \quad \quad \text{ falls } \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|} = 0 \\
+\frac{1}{\limsup\limits_{c \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|}}  \text{ falls } \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|} > 0 \\
+\end{cases}\]
+\Bem Der Konvergenzbereich ist $\{z \in  \C | \abs{z} < \rho\}$
+
+\sep
+
+\Def[2.7.22] $\sum_{k=0}^{\infty} b_{k}$ ist eine lineare Anordnung der Doppelreihe $\sum_{i,j \geq 0} a_{ij}$, falls es eine Bijektion $\sigma : \N \rightarrow \N \times \N$ gibt mit $b_k = a_{\epsilon(k)}$.
+
+\Satz[2.7.23] Falls $\sum_{i=0}^{m}\sum_{j=0}^{m}\abs{a_{ij}} \leq B, \quad \forall m \geq 0$
+\[ \text{dann konvergiert } S_{i} := \sum_{j=0}^{\infty} a_{ij} \quad \forall i \geq 0 \]
+\[ \text{dann konvergiert } U_{j} := \sum_{i=0}^{\infty} a_{ij} \quad \forall j \geq 0 \]
+\[ \text{und es gilt } \sum_{i=0}^{m} S_{i} = \sum_{j=0}^{m} U_{j} \]
+
+\Satz[2.7.24] Das \textbf{Cauchy Produkt} der Reihen $\sum_{i=0}^{\infty} a_i, \ \sum_{i=0}^{\infty} b_i$ ist die Reihe
+\[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = a_0 b_0 + (a_0 b_1 + a_1 b_0) + \cdots  \]
+
+\Satz[2.7.26] Falls die Reihen $\sum_{i=0}^{\infty} a_i, \ \sum_{i=0}^{\infty} b_i$ absolut konvergieren, so knovergiert ihr Cauchy Produkt und es gilt:
+\[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = \Bigg( \sum_{i=0}^\infty a_i \Bigg) \Bigg(\sum_{j=0}^\infty b_j \Bigg) \]
+
+\sep
+
+\Satz[2.7.28] Sei $f_n : \N \rightarrow \R$ eine Folge, für die gilt:
+\begin{enumerate}
+\item[(1)] $ f(j) :=  \lim\limits_{n \rightarrow \infty}$ existiert $\forall j \in \N$ 
+\item[(2)] Es gibt eine Funktion $g : \N \rightarrow [0, \infty[,$ so dass
+\begin{enumerate}
+\item[(2.1)] $\abs{f_n(j)} \leq g(j) \quad \forall j \geq 0, \ \forall n \geq 0$
+\item[(2.2)] $\sum_{j=0}^{\infty} g(j)$ konvergiert
+\end{enumerate}
+\end{enumerate}
+
+\( \text{Dann folgt } \sum_{j=0}^{\infty} f(j) =  \lim\limits_{n \rightarrow \infty} \sum_{j=0}^{\infty} f_n(j) \)
+
+\Korollar[2.7.29] Für jedes $z \in \C$ gilt
+\[\lim\limits_{n \rightarrow \infty} \sum_{j=0}^{\infty} \bigg(1 + \frac{z}{n} \bigg)^n = \text{exp}(z) \]
+\sep
