@@ -1,5 +1,41 @@
-\part{Stetige Funktionen}
+\section{Stetige Funktionen}
 
+\subsection{Reelwertige Funktionen}
+
+\Def[3.1.1] Sei $f \in \R^D$
+\begin{enumerate}
+\item[(1)] f ist \textbf{nach oben beschränkt}, falls $f(D) \subset \R$ nach oben beschränkt ist.
+\item[(2)] f ist \textbf{nach unten beschränkt}, falls $f(D) \subset \R$ nach unten ebschränkt ist.
+\item[(3)] f ist \textbf{beschränkt}, falls $f(D) \subset \R$ beschränkt ist.
+\end{enumerate}
+
+\Def[3.1.2] Eine Funktion $f: D \longrightarrow \mathbf{R},$ wobei $D \subset \mathbf{R},$ ist
+\begin{enumerate}
+\item[(1)] \textbf{monoton wachsend}, falls $\forall x, y \in D$
+\[
+x \leqslant y \Longrightarrow f(x) \leqslant f(y)
+\]
+\item[(2)] \textbf{streng monoton wachsend}, falls $\forall x, y \in D$
+\[
+x<y \Longrightarrow f(x)<f(y)
+\]
+\item[(3)] \textbf{monoton fallend}, falls $\forall x, y \in D$
+\[
+x \leqslant y \Longrightarrow f(x) \geqslant f(y)
+\]
+\item[(4)] \textbf{streng monoton fallend}, falls $\forall x, y \in D$
+\[
+x<y \Longrightarrow f(x)>f(y)
+\]
+\item[(5)] \textbf{monoton}, falls $f$ monoton wachsend oder monoton fallend
+\item[(6)] \textbf{streng monoton}, falls $f$ streng monoton wachsend oder streng monoton fallend ist.
+\end{enumerate}
+
+\subsection{Stetigkeit an einem Punkt}
+\Def[3.2.1] Sei $x_{0} \in D \subseteq \R$. Die Funktion $f: D \longrightarrow \R$ ist in $\boldsymbol{x}_{0}$ stetig, falls es für jedes $\varepsilon>0$ ein $\delta>0$ gibt, so dass für alle $x \in D$ gilt: $$\abs{x-x_{0}}<\delta \Longrightarrow\abs{f(x)-f\left(x_{0}\right)}<\varepsilon$$.
+\sep
+\sep
+\sep
 % Allgemeine Stetigkeit
 \Def Die Funktion $f: D \longrightarrow \R$ ist stetig falls sie in jedem Punkt von $D$ stetig ist.
 
