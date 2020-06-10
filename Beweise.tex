@@ -1,0 +1,37 @@
+\sep
+
+\section{Beweise}
+\sep
+\subsection{Grundlagen}
+\sep
+
+\Beweis $\sup (A + B) \leq \sup A + \sup B$ \\
+\(
+\text{Es gilt } a + b \leq \sup A + b \leq \sup A + \sup B \\
+\implies \sup (A + B) \leq \sup A + \sup B
+\)
+\sep
+
+\Beweis $\sup A + \sup B \leq \sup(A + B)$  \\
+\(
+\text{Es gilt } \forall \epsilon > 0 \quad \sup A \leq a -  \frac{\epsilon}{2} \text{ und } \sup B \leq b -  \frac{\epsilon}{2} \\
+\implies \sup A + \sup B + \epsilon \leq a + b \leq \sup (A + B) 
+\)
+\sep
+
+\subsection{Folgen und Reihen}
+\sep
+
+\Satz[Sandwich Satz] Wir nehmen an, dass 
+\begin{enumerate}
+\item $\lim\limits_{n \rightarrow \infty} a_{n} = \lim\limits_{n \rightarrow \infty} b_{n} = \alpha$ 
+\item $a_{n} \leq c_{n} \leq b_{n} \ \forall n \geq K$
+\end{enumerate}
+
+\(
+\text{Es gilt } \abs{a_n - \alpha} < \epsilon \implies - \epsilon < a_n - \alpha \\
+\text{Es gilt } \abs{b_n - \alpha} < \epsilon \implies + \epsilon > b_n - \alpha \\
+\implies - \epsilon < a_n - \alpha \leq c_n - \alpha \leq b_n - \alpha < \epsilon \\
+\implies \abs{c_n - \alpha} < \epsilon \implies \lim\limits_{n \rightarrow \infty} c_{n} = \alpha
+\)
+\sep

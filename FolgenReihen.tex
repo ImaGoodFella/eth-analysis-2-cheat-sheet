@@ -1,16 +1,16 @@
 \sep
 \section{Folgen und Reihen}
 
-\Def[2.1.1] Eine \textbf{Folge} $a_n$ in $\mathbf{R}$ ist eine Abbildung
+\Def[2.1.1] Eine \textbf{Folge} $a_n$ in $\R$ ist eine Abbildung
 \[
-a: \mathbf{N}^{*} \longrightarrow \mathbf{R}
+a: \N\longrightarrow \R
 \] 
 \sep
 \subsection{Konvergenz von Folgen}
 
 \Def[2.1.4] Eine Folge $a_n$ heisst \textbf{konvergent}, falls es $a \in \R$ gibt, so dass $\forall \epsilon > 0$ die Menge
 $
-\left\{n \in \mathbf{N}^{*}: a_{n} \notin\right] a-\varepsilon, a+\varepsilon[\}
+\left\{n \in \N: a_{n} \notin\right] a-\varepsilon, a+\varepsilon[\}
 $ endlich ist.
 \Lemma[2.1.3] Dieses $a$ ist \textbf{eindeutig}. \\
 
@@ -121,7 +121,7 @@ Die Länge eines $\mathcal{L}(I)$ ist definiert als:
 \sep
 
 \Def[2.5.7] $b_{n}$ ist eine Teilfoge von $a_{n}$, falls 
-\[b_{n} = a_{l(n)}, \quad l : \mathbf{N}^{*} \rightarrow \mathbf{N}^{*} \text{ und } l(n) > l(n + 1) \]
+\[b_{n} = a_{l(n)}, \quad l : \N\rightarrow \N\text{ und } l(n) > l(n + 1) \]
 
 \Satz[2.5.9 (Bolzano-Weierstrass)] Für jede beschränkte Folge existiert eine konvergente Teilfolge.
 
@@ -131,7 +131,7 @@ Die Länge eines $\mathcal{L}(I)$ ist definiert als:
 
 \Def[2.6.1] Eine \textbf{Folge} $a_n$ in $\mathbf{R^{d}}$ ist eine Abbildung
 \[
-a: \mathbf{N}^{*} \longrightarrow \mathbf{R^{d}}
+a: \N\longrightarrow \mathbf{R^{d}}
 \] 
 
 \Def[2.6.2] Eine Folge $a_n$ in $\mathbf{R^{d}}$ konvergiert gegen ${a = \lim\limits_{n \rightarrow \infty} a_{n}}$, falls $ \forall \epsilon > 0 \ \exists N \geq 0$ so dass $\ \forall n\geq N$
@@ -162,7 +162,7 @@ a: \mathbf{N}^{*} \longrightarrow \mathbf{R^{d}}
 \Satz[2.7.5 (Cauchy Kriterium)] $\sum_{k=0}^{\infty} a_{k}$ ist genau dann konvergent, falls
 \[ \forall \epsilon > 0 \ \exists n \geq 0 \text{ mit } \abs{\sum_{k=n}^{m} a_{k}} < \epsilon \quad \forall m \geq n \geq N\]
 
-\Satz[2.7.6] Sei $\sum_{k=0}^{\infty} a_{k}$ mit $a_{k} \geq  0 \ \forall k \in \mathbf{N}^{*}$. Dann konvergiert
+\Satz[2.7.6] Sei $\sum_{k=0}^{\infty} a_{k}$ mit $a_{k} \geq  0 \ \forall k \in \N$. Dann konvergiert
 $\sum_{k=0}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=0}^{n} a_{k}$ nach oben beschränkt ist
 
 \sep
