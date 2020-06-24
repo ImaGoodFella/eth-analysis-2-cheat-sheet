@@ -60,6 +60,7 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \end{enumerate}
 \Bsp[2.2.3] $\lim\limits_{n \rightarrow \infty} n^{a}q^{n} = 0, \ 0 \leq q < 1, \ a \in \Z$ \\
 \Bsp[2.2.5] $\lim\limits_{n \rightarrow \infty} \sqrt[n]{n} = 1$ \\
+\Bsp[2.2.6] $\lim\limits_{n \rightarrow \infty} (1 + \frac{1}{n})^n = e$ \\
 \Lemma[2.2.7 (Bernoulli Ungleichung)]
 \[
 (1 + x)^{n+1} \geq 1 + n \cdot x \ \ \forall n \in \N, x > -1
@@ -89,7 +90,7 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 
 \Satz[2.4.2 (Cauchy Kriterium)] Die Folge $a_{n}$ ist genau dann konvergent und heisst Cauchy-Folge
 \[
-\forall \epsilon > 0 \ \exists N \geq 0 \text{ so dass } \abs{a_{n} - a_{m}} \ \ \forall n, m \geq N
+\forall \epsilon > 0 \ \exists N \geq 0 \text{ so dass } \abs{a_{n} - a_{m}}  < \epsilon \ \ \forall n, m \geq N
 \]
 
 \sep
@@ -143,53 +144,57 @@ a: \N\longrightarrow \mathbf{R^{d}}
 \subsection{Reihen}
 
 \Def[2.7.0] Eine Reihe ist eine unendliche Summe
-\[S_{n} := a_{1} + a_{n} \cdots = \sum_{k=0}^{n} a_{k}\]
+\[S_{n} := a_{1}  + \cdots + a_{n} = \sum_{k=1}^{n} a_{k}\]
 
 \Def[2.7.1] Die Reihe $\sum_{k=1}^{n} a_{k}$ ist \textbf{konvergent}, falls die Folge der Partialsummen konvergiert. 
-\[\sum_{k=0}^{\infty} a_{k} = \lim\limits_{n \rightarrow \infty} S_{n} \]
+\[\sum_{k=1}^{\infty} a_{k} = \lim\limits_{n \rightarrow \infty} S_{n} \]
 
 \Bsp[2.7.2 (Geometrische Reihe)] Sei $\abs{q} < 1$
-\[\sum_{k=0}^{\infty} q^k = \frac{1}{1-q} \]
+\[\sum_{k=1}^{\infty} q^k = \frac{1}{1-q} \]
 
-\Satz[2.7.4] Seien $\sum_{k=0}^{\infty} a_{k}$ und $\sum_{k=0}^{\infty} b_{k}$ konvergent
+\Satz[2.7.4] Seien $\sum_{k=1}^{\infty} a_{k}$ und $\sum_{k=1}^{\infty} b_{k}$ konvergent
 \begin{enumerate}
-\item[(1)] $\sum_{k=0}^{\infty} (a_{k} + b_{k}) = \sum_{k=0}^{\infty} a_{k} + \sum_{k=0}^{\infty} a_{k}$ 
-\item[(2)] $\sum_{k=0}^{\infty} \alpha \cdot a_{k} = \alpha \cdot \sum_{k=0}^{\infty} a_{k}$
+\item[(1)] $\sum_{k=1}^{\infty} (a_{k} + b_{k}) = \sum_{k=1}^{\infty} a_{k} + \sum_{k=1}^{\infty} a_{k}$ 
+\item[(2)] $\sum_{k=1}^{\infty} \alpha \cdot a_{k} = \alpha \cdot \sum_{k=1}^{\infty} a_{k}$
 \end{enumerate}
 
 \sep
 
-\Satz[2.7.5 (Cauchy Kriterium)] $\sum_{k=0}^{\infty} a_{k}$ ist genau dann konvergent, falls
-\[ \forall \epsilon > 0 \ \exists n \geq 0 \text{ mit } \abs{\sum_{k=n}^{m} a_{k}} < \epsilon \quad \forall m \geq n \geq N\]
+\Satz[2.7.5 (Cauchy Kriterium)] $\sum_{k=1}^{\infty} a_{k}$ ist genau dann konvergent, falls
+\[ \forall \epsilon > 0 \ \exists N \geq 0 \text{ mit } \abs{\sum_{k=n}^{m} a_{k}} < \epsilon \quad \forall m \geq n \geq N\]
 
-\Satz[2.7.6] Sei $\sum_{k=0}^{\infty} a_{k}$ mit $a_{k} \geq  0 \ \forall k \in \N$. Dann konvergiert
-$\sum_{k=0}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=0}^{n} a_{k}$ nach oben beschränkt ist
+\Bem $\sum_{k=1}^{\infty} a_{k}$ konvergent $\implies  \lim\limits_{n \rightarrow \infty} a_{n} = 0$
 
-\sep
-
-\Korollar[2.7.7 (Vergleichssatz)] Seien $\sum_{k=0}^{\infty} a_{k}$ und $\sum_{k=0}^{\infty} b_{k}$ Reihen mit: $0 \leq a_{k} \leq b_{k} \quad \forall k \geq 0. $
-\[ \sum_{k=0}^{\infty} b_{k} \text{ konvergent} \implies \sum_{k=0}^{\infty} a_{k} \text{ konvergent} \]
-\[ \sum_{k=0}^{\infty} a_{k} \text{ divergent} \implies \sum_{k=0}^{\infty} b_{k} \text{ divergent} \]
+\Satz[2.7.6] Sei $\sum_{k=1}^{\infty} a_{k}$ mit $a_{k} \geq  0 \ \forall k \in \N$. Dann konvergiert
+$\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} a_{k}$ nach oben beschränkt ist
 
 \sep
 
-\Satz[2.7.9] $\sum_{k=0}^{\infty} a_{k}$ heisst \textbf{absolut konvergent}, 
-\[ \text{falls } \sum_{k=0}^{\infty} \abs{a_{k}} \text{ konvergiert} \]
+\Korollar[2.7.7 (Vergleichssatz)] Seien $\sum_{k=1}^{\infty} a_{k}$ und $\sum_{k=1}^{\infty} b_{k}$ Reihen mit: $0 \leq a_{k} \leq b_{k} \quad \forall k \geq 1. $
+\[ \sum_{k=1}^{\infty} b_{k} \text{ konvergent} \implies \sum_{k=1}^{\infty} a_{k} \text{ konvergent} \]
+\[ \sum_{k=1}^{\infty} a_{k} \text{ divergent} \implies \sum_{k=1}^{\infty} b_{k} \text{ divergent} \]
 
-\Satz[2.7.10] Eine absolut konvergente Reihe $\sum_{k=0}^{\infty} a_{k}$ ist auch konvergent und es gilt:
-\[ \abs{\sum_{k=0}^{\infty} a_{k}} \leq \sum_{k=0}^{\infty} \abs{a_{k}}\]
+\sep
 
+\Satz[2.7.9] $\sum_{k=1}^{\infty} a_{k}$ heisst \textbf{absolut konvergent}, 
+\[ \text{falls } \sum_{k=1}^{\infty} \abs{a_{k}} \text{ konvergiert} \]
+
+\Satz[2.7.10] Eine absolut konvergente Reihe $\sum_{k=1}^{\infty} a_{k}$ ist auch konvergent und es gilt:
+\[ \abs{\sum_{k=1}^{\infty} a_{k}} \leq \sum_{k=1}^{\infty} \abs{a_{k}}\]
+
+\Bsp $\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} \quad \quad \sum_{k=1}^{\infty} \frac{(-1)^k}{k^2} = \frac{-\pi^2}{12}$ 
+ 
 \sep
 
 \Satz[2.7.12 Leibniz] Sei $a_{n}$ monoton fallend mit $a_{n} \geq 0 \ \forall n \geq 0, \ \lim\limits_{n \rightarrow \infty} a_{n} = 0.$ Dann konvergiert
-\[ S :=  \sum_{k=0}^{\infty} (-1)^{k+1} a_{k} \text{ und } a_{1} - 1_{2} \leq S \leq {a_1} \]
+\[ S :=  \sum_{k=1}^{\infty} (-1)^{k+1} a_{k} \text{ und } a_{1} - 1_{2} \leq S \leq {a_1} \]
 \sep
 
-\Def[2.7.14] Eine Reihe  $\sum_{k=0}^{\infty} a'_{n}$ ist eine Umordung der Reihe  $\sum_{k=0}^{\infty} a_{n}$, falls es eine bijektive Abbildung $\phi : \N^{*} \rightarrow \N^{*}$ mit $a'_{n} = a_{\phi(n)}$ 
+\Def[2.7.14] Eine Reihe  $\sum_{k=1}^{\infty} a'_{n}$ ist eine Umordung der Reihe  $\sum_{k=1}^{\infty} a_{n}$, falls es eine bijektive Abbildung $\phi : \N^{*} \rightarrow \N^{*}$ mit $a'_{n} = a_{\phi(n)}$ 
 
-\Satz[2.7.16 Dirichlet] Falls $\sum_{k=0}^{\infty} a_{n}$ absolut konvergiert, dann konvergiert jede Umordnung der Riehe und hat denselben Grenzwert.  
+\Satz[2.7.16 Dirichlet] Falls $\sum_{k=1}^{\infty} a_{n}$ absolut konvergiert, dann konvergiert jede Umordnung der Reihe und hat denselben Grenzwert.  
 
-\Satz[Riemann] Sei $\sum_{k=0}^{\infty} a_{n}$ eine konvergente, aber nicht absolut konvergente Riehe, dann gibt es zu jedem $A \in \R \cup \{\pm \infty\}$ eine Umordnung der Reihe, die gegen A konvergiert. 
+\Satz[Riemann] Sei $\sum_{k=1}^{\infty} a_{n}$ eine konvergente, aber nicht absolut konvergente Reihe, dann gibt es zu jedem $A \in \R \cup \{\pm \infty\}$ eine Umordnung der Reihe, die gegen A konvergiert. 
 
 \sep
 
@@ -199,11 +204,17 @@ $\sum_{k=0}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=0}^{n} 
 
 \sep
 
+\Bsp exp(z)$ := 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots = \sum_{n=0}^{\infty} \dfrac{z^{n}}{n!}$
+
+\Bsp $\zeta(s) =  \sum_{n=1}^{\infty} \dfrac{1}{n^s}$ konvergiert für $s > 1$
+
+\Bsp $\sum_{k=1}^{\infty} k q^k = \frac{q}{(1- q)^2}$
+
 \Satz[Wurzelkriterium] 
 \[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1 \implies \sum_{n=0}^{\infty} a_{n} \text{ konvergiert absolut} \]
 \[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}>1 \implies \sum_{n=0}^{\infty} a_{n} \text{ divergiert} \quad \quad \quad \quad \]
 
-\Korollar[2.7.21] Die Potenzreihe $\sum_{k=0}^{\infty} c_{k}$ konvergiert für alle $\abs{z} < \rho$ und divergiert für alle $\abs{z} > \rho$
+\Korollar[2.7.21] Die Potenzreihe $\sum_{k=1}^{\infty} c_{k} z^k$ konvergiert für alle $\abs{z} < \rho$ und divergiert für alle $\abs{z} > \rho$
 \[\rho =\begin{cases}
 \quad \quad + \infty \quad \quad \text{ falls } \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|} = 0 \\
 \frac{1}{\limsup\limits_{c \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|}}  \text{ falls } \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|} > 0 \\
@@ -212,7 +223,7 @@ $\sum_{k=0}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=0}^{n} 
 
 \sep
 
-\Def[2.7.22] $\sum_{k=0}^{\infty} b_{k}$ ist eine lineare Anordnung der Doppelreihe $\sum_{i,j \geq 0} a_{ij}$, falls es eine Bijektion $\sigma : \N \rightarrow \N \times \N$ gibt mit $b_k = a_{\epsilon(k)}$.
+\Def[2.7.22] $\sum_{k=1}^{\infty} b_{k}$ ist eine lineare Anordnung der Doppelreihe $\sum_{i,j \geq 0} a_{ij}$, falls es eine Bijektion $\sigma : \N \rightarrow \N \times \N$ gibt mit $b_k = a_{\epsilon(k)}$.
 
 \Satz[2.7.23] Falls $\sum_{i=0}^{m}\sum_{j=0}^{m}\abs{a_{ij}} \leq B, \quad \forall m \geq 0$
 \[ \text{dann konvergiert } S_{i} := \sum_{j=0}^{\infty} a_{ij} \quad \forall i \geq 0 \]
@@ -229,7 +240,7 @@ $\sum_{k=0}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=0}^{n} 
 
 \Satz[2.7.28] Sei $f_n : \N \rightarrow \R$ eine Folge, für die gilt:
 \begin{enumerate}
-\item[(1)] $ f(j) :=  \lim\limits_{n \rightarrow \infty}$ existiert $\forall j \in \N$ 
+\item[(1)] $ f(j) :=  \lim\limits_{n \rightarrow \infty} f_n(j) $ existiert $\forall j \in \N$ 
 \item[(2)] Es gibt eine Funktion $g : \N \rightarrow [0, \infty[,$ so dass
 \begin{enumerate}
 \item[(2.1)] $\abs{f_n(j)} \leq g(j) \quad \forall j \geq 0, \ \forall n \geq 0$
