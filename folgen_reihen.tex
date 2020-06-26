@@ -44,8 +44,9 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \Def[2.2.1] Falls  $a_{n}$ ist
 \begin{enumerate}
 \item[1)] \textbf{monoton wachsend}  falls ${a_{n} \leq a_{n + 1} \ \forall n \geq 0}$
-\item[2)] \textbf{monoton fallend} falls ${a_{n} \geq a_{n + 1} \ \forall n \geq 0}$
+\item[2)] \textbf{monoton fallend} falls ${a_{n} \geq a_{n + 1} \ \forall n \geq 0}$ \\
 \end{enumerate}
+
 
 \Satz[2.2.2 (Weierstrass)] Genau dann, wenn $a_{n}$ 
 \begin{enumerate}
@@ -77,6 +78,7 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \[
 \limsup\limits_{n \rightarrow \infty} a_{n} = \lim\limits_{n \rightarrow \infty} c_{n}, \ \ (c_{n} = \text{sup} \{a_{k} : k \geq n \})
 \]
+
 
 \Lemma[2.4.1] Die Folge $a_{n}$ konvergiert genau dann, falls
 \begin{enumerate}
@@ -161,9 +163,9 @@ a: \N\longrightarrow \mathbf{R^{d}}
 \sep
 
 \Satz[2.7.5 (Cauchy Kriterium)] $\sum_{k=1}^{\infty} a_{k}$ ist genau dann konvergent, falls
-\[ \forall \epsilon > 0 \ \exists N \geq 0 \text{ mit } \abs{\sum_{k=n}^{m} a_{k}} < \epsilon \quad \forall m \geq n \geq N\]
+\[ \forall \epsilon > 0 \ \exists N \geq 0 \text{ mit } \abs{\sum_{k=n}^{m} a_{k}} < \epsilon \quad \forall m \geq n \geq N\] 
 
-\Bem $\sum_{k=1}^{\infty} a_{k}$ konvergent $\implies  \lim\limits_{n \rightarrow \infty} a_{n} = 0$
+\Bem $\sum_{k=1}^{\infty} a_{k}$ konvergent $\implies  \lim\limits_{n \rightarrow \infty} a_{n} = 0$ \\
 
 \Satz[2.7.6] Sei $\sum_{k=1}^{\infty} a_{k}$ mit $a_{k} \geq  0 \ \forall k \in \N$. Dann konvergiert
 $\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} a_{k}$ nach oben beschränkt ist
@@ -190,9 +192,9 @@ $\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} 
 \[ S :=  \sum_{k=1}^{\infty} (-1)^{k+1} a_{k} \text{ und } a_{1} - 1_{2} \leq S \leq {a_1} \]
 \sep
 
-\Def[2.7.14] Eine Reihe  $\sum_{k=1}^{\infty} a'_{n}$ ist eine Umordung der Reihe  $\sum_{k=1}^{\infty} a_{n}$, falls es eine bijektive Abbildung $\phi : \N^{*} \rightarrow \N^{*}$ mit $a'_{n} = a_{\phi(n)}$ 
+\Def[2.7.14] Eine Reihe  $\sum_{k=1}^{\infty} a'_{n}$ ist eine Umordung der Reihe  $\sum_{k=1}^{\infty} a_{n}$, falls es eine bijektive Abbildung $\phi : \N^{*} \rightarrow \N^{*}$ mit $a'_{n} = a_{\phi(n)}$  \\
 
-\Satz[2.7.16 Dirichlet] Falls $\sum_{k=1}^{\infty} a_{n}$ absolut konvergiert, dann konvergiert jede Umordnung der Reihe und hat denselben Grenzwert.  
+\Satz[2.7.16 Dirichlet] Falls $\sum_{k=1}^{\infty} a_{n}$ absolut konvergiert, dann konvergiert jede Umordnung der Reihe und hat denselben Grenzwert.   \\
 
 \Satz[Riemann] Sei $\sum_{k=1}^{\infty} a_{n}$ eine konvergente, aber nicht absolut konvergente Reihe, dann gibt es zu jedem $A \in \R \cup \{\pm \infty\}$ eine Umordnung der Reihe, die gegen A konvergiert. 
 
@@ -208,30 +210,34 @@ $\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} 
 
 \Bsp $\zeta(s) =  \sum_{n=1}^{\infty} \dfrac{1}{n^s}$ konvergiert für $s > 1$
 
-\Bsp $\sum_{k=1}^{\infty} k q^k = \frac{q}{(1- q)^2}$
+\Bsp $\sum_{k=1}^{\infty} k q^k = \frac{q}{(1- q)^2}$ 
 
 \Satz[Wurzelkriterium] 
 \[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1 \implies \sum_{n=0}^{\infty} a_{n} \text{ konvergiert absolut} \]
-\[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}>1 \implies \sum_{n=0}^{\infty} a_{n} \text{ divergiert} \quad \quad \quad \quad \]
-
-\Korollar[2.7.21] Die Potenzreihe $\sum_{k=1}^{\infty} c_{k} z^k$ konvergiert für alle $\abs{z} < \rho$ und divergiert für alle $\abs{z} > \rho$
-\[\rho =\begin{cases}
-\quad \quad + \infty \quad \quad \text{ falls } \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|} = 0 \\
-\frac{1}{\limsup\limits_{c \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|}}  \text{ falls } \limsup\limits_{k \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|} > 0 \\
-\end{cases}\]
-\Bem Der Konvergenzbereich ist $\{z \in  \C | \abs{z} < \rho\}$
+\(\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}>1 \implies \sum_{n=0}^{\infty} a_{n} \text{ divergiert}\)
 
 \sep
 
-\Def[2.7.22] $\sum_{k=1}^{\infty} b_{k}$ ist eine lineare Anordnung der Doppelreihe $\sum_{i,j \geq 0} a_{ij}$, falls es eine Bijektion $\sigma : \N \rightarrow \N \times \N$ gibt mit $b_k = a_{\epsilon(k)}$.
+\Korollar[2.7.21] Die Potenzreihe $\sum_{k=1}^{\infty} c_{k} (x-x_0)^k$
+\begin{itemize}
+\item konvergiert für alle $\abs{x - x_0} < \rho$ 
+\item divergiert für alle $\abs{x - x_0} > \rho$
+\end{itemize}
+\[\rho = \begin{cases}
+\limsup\limits_{n \rightarrow \infty} \frac{\left|c_{n}\right|}{\left|c_{n + 1}\right|} \quad \text{für } n!, \alpha^n \text{ oder Polynom} \\
+\frac{1}{\limsup\limits_{c \rightarrow \infty} \sqrt[k]{\left|c_{k}\right|}}  \quad \  \ \text{für } (b_n)^n
+\end{cases}\]
+\sep
+
+\Def[2.7.22] $\sum_{k=1}^{\infty} b_{k}$ ist eine lineare Anordnung der Doppelreihe $\sum_{i,j \geq 0} a_{ij}$, falls es eine Bijektion $\sigma : \N \rightarrow \N \times \N$ gibt mit $b_k = a_{\epsilon(k)}$.  \\
 
 \Satz[2.7.23] Falls $\sum_{i=0}^{m}\sum_{j=0}^{m}\abs{a_{ij}} \leq B, \quad \forall m \geq 0$
 \[ \text{dann konvergiert } S_{i} := \sum_{j=0}^{\infty} a_{ij} \quad \forall i \geq 0 \]
 \[ \text{dann konvergiert } U_{j} := \sum_{i=0}^{\infty} a_{ij} \quad \forall j \geq 0 \]
-\[ \text{und es gilt } \sum_{i=0}^{m} S_{i} = \sum_{j=0}^{m} U_{j} \]
+\[ \text{und es gilt } \sum_{i=0}^{m} S_{i} = \sum_{j=0}^{m} U_{j} \] 
 
 \Satz[2.7.24] Das \textbf{Cauchy Produkt} der Reihen $\sum_{i=0}^{\infty} a_i, \ \sum_{i=0}^{\infty} b_i$ ist die Reihe
-\[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = a_0 b_0 + (a_0 b_1 + a_1 b_0) + \cdots  \]
+\[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = a_0 b_0 + (a_0 b_1 + a_1 b_0) + \cdots  \]  \\
 
 \Satz[2.7.26] Falls die Reihen $\sum_{i=0}^{\infty} a_i, \ \sum_{i=0}^{\infty} b_i$ absolut konvergieren, so knovergiert ihr Cauchy Produkt und es gilt:
 \[\sum_{n=0}^\infty \Bigg(\sum_{j=0}^{n} a_{n-j} b_{j} \Bigg) = \Bigg( \sum_{i=0}^\infty a_i \Bigg) \Bigg(\sum_{j=0}^\infty b_j \Bigg) \]
@@ -248,8 +254,8 @@ $\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} 
 \end{enumerate}
 \end{enumerate}
 
-\( \text{Dann folgt } \sum_{j=0}^{\infty} f(j) =  \lim\limits_{n \rightarrow \infty} \sum_{j=0}^{\infty} f_n(j) \)
+\( \text{Dann folgt } \sum_{j=0}^{\infty} f(j) =  \lim\limits_{n \rightarrow \infty} \sum_{j=0}^{\infty} f_n(j) \)  \\
 
 \Korollar[2.7.29] Für jedes $z \in \C$ gilt
-\[\lim\limits_{n \rightarrow \infty} \sum_{j=0}^{\infty} \bigg(1 + \frac{z}{n} \bigg)^n = \text{exp}(z) \]
+\[\lim\limits_{n \rightarrow \infty} \bigg(1 + \frac{z}{n} \bigg)^n = \text{exp}(z) \]
 \sep
