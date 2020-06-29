@@ -59,9 +59,7 @@ Die Folge $a_{n}$ ist divergent, falls sie nicht konvergiert.
 \lim\limits_{n \rightarrow \infty} a_{n} = \text{inf}\{a_{n} \: n \geq 0\}
 \]
 \end{enumerate}
-\Bsp[2.2.3] $\lim\limits_{n \rightarrow \infty} n^{a}q^{n} = 0, \ 0 \leq q < 1, \ a \in \Z$ \\
-\Bsp[2.2.5] $\lim\limits_{n \rightarrow \infty} \sqrt[n]{n} = 1$ \\
-\Bsp[2.2.6] $\lim\limits_{n \rightarrow \infty} (1 + \frac{1}{n})^n = e$ \\
+
 \Lemma[2.2.7 (Bernoulli Ungleichung)]
 \[
 (1 + x)^{n+1} \geq 1 + n \cdot x \ \ \forall n \in \N, x > -1
@@ -151,9 +149,6 @@ a: \N\longrightarrow \mathbf{R^{d}}
 \Def[2.7.1] Die Reihe $\sum_{k=1}^{n} a_{k}$ ist \textbf{konvergent}, falls die Folge der Partialsummen konvergiert. 
 \[\sum_{k=1}^{\infty} a_{k} = \lim\limits_{n \rightarrow \infty} S_{n} \]
 
-\Bsp[2.7.2 (Geometrische Reihe)] Sei $\abs{q} < 1$
-\[\sum_{k=1}^{\infty} q^k = \frac{1}{1-q} \]
-
 \Satz[2.7.4] Seien $\sum_{k=1}^{\infty} a_{k}$ und $\sum_{k=1}^{\infty} b_{k}$ konvergent
 \begin{enumerate}
 \item[(1)] $\sum_{k=1}^{\infty} (a_{k} + b_{k}) = \sum_{k=1}^{\infty} a_{k} + \sum_{k=1}^{\infty} a_{k}$ 
@@ -184,12 +179,12 @@ $\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} 
 \Satz[2.7.10] Eine absolut konvergente Reihe $\sum_{k=1}^{\infty} a_{k}$ ist auch konvergent und es gilt:
 \[ \abs{\sum_{k=1}^{\infty} a_{k}} \leq \sum_{k=1}^{\infty} \abs{a_{k}}\]
 
-\Bsp $\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} \quad \quad \sum_{k=1}^{\infty} \frac{(-1)^k}{k^2} = \frac{-\pi^2}{12}$ 
+
  
 \sep
 
 \Satz[2.7.12 Leibniz] Sei $a_{n}$ monoton fallend mit $a_{n} \geq 0 \ \forall n \geq 0, \ \lim\limits_{n \rightarrow \infty} a_{n} = 0.$ Dann konvergiert
-\[ S :=  \sum_{k=1}^{\infty} (-1)^{k+1} a_{k} \text{ und } a_{1} - 1_{2} \leq S \leq {a_1} \]
+\[ S :=  \sum_{k=1}^{\infty} (-1)^{k+1} a_{k} \text{ und } a_{1} - a_{2} \leq S \leq {a_1} \]
 \sep
 
 \Def[2.7.14] Eine Reihe  $\sum_{k=1}^{\infty} a'_{n}$ ist eine Umordung der Reihe  $\sum_{k=1}^{\infty} a_{n}$, falls es eine bijektive Abbildung $\phi : \N^{*} \rightarrow \N^{*}$ mit $a'_{n} = a_{\phi(n)}$  \\
@@ -205,12 +200,6 @@ $\sum_{k=1}^{\infty} a_{k}$ genau dann, falls die Folge $S_{n} = \sum_{k=1}^{n} 
 \[\limsup\limits_{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}>1 \implies \sum_{n=0}^{\infty} a_{n} \ \text{divergiert} \quad \quad \quad \quad\]
 
 \sep
-
-\Bsp exp(z)$ := 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots = \sum_{n=0}^{\infty} \dfrac{z^{n}}{n!}$
-
-\Bsp $\zeta(s) =  \sum_{n=1}^{\infty} \dfrac{1}{n^s}$ konvergiert für $s > 1$
-
-\Bsp $\sum_{k=1}^{\infty} k q^k = \frac{q}{(1- q)^2}$ 
 
 \Satz[Wurzelkriterium] 
 \[\limsup\limits_{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}<1 \implies \sum_{n=0}^{\infty} a_{n} \text{ konvergiert absolut} \]
