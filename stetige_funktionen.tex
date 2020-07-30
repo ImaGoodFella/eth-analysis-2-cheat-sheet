@@ -96,14 +96,17 @@ Dann sind $\abs{f}, \ max(f, g), min(f, g)$ stetig in $x_0$ \\
 \sep
 
 \subsection{Exponentialfunktion}
+\[ \exp(x) = \sum_{n=0}^\infty \frac{x^n}{n!} \]
+\Satz[3.6.1] exp : $\R \rightarrow ]0, + \infty[$ ist streng monoton wachsend, stetig und surjektiv. \\
 
-\Satz[3.6.1] exp : $\R \rightarrow ]0, + \infty[$ ist streng monoton wachsend, stetig und surjektiv.
+\Korollar[3.6.2] exp(x) $> 0 \quad \forall x \in \R$ \\
 
-\Korollar[3.6.2] exp(x) $> 0 \quad \forall x \in \R$ 
+\Bsp[2.7.27] $\forall z, w  \exp(w + z) = \exp(w) + \exp(z)$\\
 
-\Korollar[3.6.3] exp(z) $>$ exp(y) $\forall z > y$
+\Korollar[3.6.3] exp(z) $>$ exp(y) $\forall z > y$\\
 
 \Korollar[3.6.4] exp(x) $\geq  1 + x \quad \forall x \in \R$ \\
+ $ \implies \exp(-x) \leq \frac{1}{1+x} \quad \forall x \in \R$ \\
 
 \Korollar[3.6.5] $ \ln : ]0, + \infty[ \ \rightarrow \R$ ist streng monoton wachsend, stetig und bijektiv. \\
 Es gilt \( \ln(a \cdot b) = \ln a + \ln b \quad \forall a, b \in \ ]0, +\infty[ \)
@@ -126,6 +129,7 @@ Es gilt \( \ln(a \cdot b) = \ln a + \ln b \quad \forall a, b \in \ ]0, +\infty[ 
  
 \Def[3.7.3] $f_n : D \rightarrow \R$ \textbf{konvergiert gleichmässig} in D gegen $f : D \rightarrow R$, falls $ \forall \epsilon \geq 0, \ \exists N > 1$, so dass
 \[\forall n \geq N, \ \ \forall x \in D : \abs{f_n(x) - f(x)} < \epsilon \]
+\[\limsup \limits_{x \in I} \abs{f(x) - f_n(x) } \xrightarrow[n \rightarrow \infty]{} 0 \]
 
 \Satz[3.7.4] Falls $f_n : D \rightarrow \R$ gegen $f : D \rightarrow \R$ gleichmässig konvergiert, dann ist f stetig. \\
 
@@ -142,25 +146,3 @@ und $f_n$ gleichmässig gegen f konvergiert. \\
 \Def[3.7.9] $f_n :  D \rightarrow \R$ eine Folge stetiger Funktionen, wobei $\abs{f_n (x)} \leq c_n \quad \forall x \in D$ und $\sum_{n=0}^\infty c_n$ konvergiert. \\ Dann konvergiert die Reihe $f(x) := \sum_{n=0}^\infty f_n(x)$ , wobei $f(x)$ eine stetige Funktion ist. 
 
 \sep
-
-\subsection{Trigonometrische Funktionen}
-
-\[\sin z = z - \frac{z^3}{3!} + \frac{z^5}{5!} - \frac{z^7}{7!} + \cdots = \sum_{n=0}^\infty \frac{(-1)^n z^{2n + 1}}{(2n + 1)!} \]
-
-\[\cos z = 1 - \frac{z^2}{2!} + \frac{z^4}{4!} - \frac{z^6}{6!} + \cdots = \sum_{n=0}^\infty \frac{(-1)^n z^{2n}}{(2n)!} \]
-
-\Satz[3.8.1] $\sin : \R \rightarrow \R,  \ \cos : \R \rightarrow \R$ sind stetig
-
-\Satz[3.8.2] Eigenschaften von sin und cos
-\begin{enumerate}
-	\item $\cos z = \cos(-z) \text{ und } \sin(-z) = -\sin(z)$
-	\item $\exp(i \cdot z) = \cos(z) + i \cdot \sin(z)$
-	\item $\cos(z)^2 + \sin(z)^2 = 1$
-	\item $\sin(z+w) = \sin(z) \cdot \cos(w) + \sin(w) \cdot \cos(z)$ \\
-	 $\cos(z+w) = \cos(z) \cdot \cos(w) - \sin(w) \cdot \sin(z)$ 
-	\item $\sin(z) = \frac{e^{iz}-e^{-iz}}{2i}$, $\cos(z) = \frac{e^{iz}+e^{-iz}}{2}$
-\end{enumerate}
-
-\Korollar[3.8.3] \\
-\( \sin(2 \cdot z) = 2 \sin(z) \cdot \cos(z) \) \\ 
-\(\cos(2 \cdot z) = \cos(z)^2 \cdot \sin(z)^2 \)
