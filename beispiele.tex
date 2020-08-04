@@ -29,6 +29,10 @@
 \Bsp[4.1.10] \\
 \((x_n)' = n x^{n - 1}$ für $ n \geq 1\quad \forall x \in \R \)
 
+\( \sin'(x) = \cos(x) \)
+
+\( \cos'(x) = -\sin(x) \)
+
 \(\tan' x = \frac{1}{\cos^2 (x)} \)
 
 \(\cot' x = \frac{-1}{\sin^2 (x)} \quad \quad \cot x = \frac{\cos x}{\sin x}  \) \\
@@ -48,10 +52,6 @@
 \(\text{arccot}'(y) =  \frac{- 1}{\sin^2 (x)}  = \frac{- 1}{1 + y^2} \) \\
 
 \Bsp[4.2.7] \\
-
-\( \sin'(x) = \cos(x) \)
-
-\( \cos'(x) = -\sin(x) \)
 
 \( \cosh'(x) = \frac{e^x - e^{-x}}{2} = \sinh (x) \)
 
@@ -93,8 +93,10 @@
 & \int x^2 \sin(x) = -x^2 \cos(x) + 2x \sin(x) + 2 \cos(x) & \nonumber \\
 & \int x e^x \ dx = x e^x - x & \nonumber \\
 & \int x \cos (x) \ dx = x \sin(x) + \cos(x) & \nonumber \\
-& I_n = \int \sin^n(x), n \geq 0 & \nonumber \\ 
-& I_n = - \frac{1}{n} \cos (x) \sin^{n-1} (x) + \frac{n - 1}{n} I_{n - 2} & \nonumber
+& I_n = \int \sin^n(x) dx, n \geq 0 & \nonumber \\ 
+& I_n = - \frac{1}{n} \cos (x) \sin^{n-1} (x) + \frac{n - 1}{n} I_{n - 2} & \nonumber \\
+& \int \sin^2(x) dx = \frac{x}{2} - \frac{\sin(x) \cos(x)}{2} & \nonumber \\
+& \int \cos^2(x) dx = \frac{x}{2} + \frac{\sin(x) \cos(x)}{2} & \nonumber
 \end{flalign}
 
 \sep
@@ -115,5 +117,6 @@
 \end{flalign}
 
 \Trick
-\[ \int \frac{f'(x)}{f(x)} = \ln(f(x)), \quad \text{mit } f \text{ beliebig} \]
-\sep
+\[ \int \frac{f'(x)}{f(x)} dx = \ln(f(x)), \quad \text{mit } f \text{ beliebig} \]
+
+\[ \int f'(x) f(x) dx = \frac{f(x)^2}{2} \quad \text{mit } f  \text{ beliebig} \]

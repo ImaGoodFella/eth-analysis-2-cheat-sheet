@@ -26,7 +26,7 @@
 & \sin ( \alpha \pm \beta ) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta & \nonumber \\ 
 & \cos( \alpha \pm \beta ) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta & \nonumber \\
 & \tan( \alpha \pm \beta) = \frac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta} & \nonumber \\
-& \sin ( 2 \alpha) = 2 \sin \cos \alpha & \nonumber \\
+& \sin ( 2 \alpha) = 2 \sin \alpha \cos \alpha & \nonumber \\
 & \cos( 2 \alpha) = \cos^2 \alpha - \sin^2 \alpha = 2 \cos^2 \alpha - 1 & \nonumber \\
 & \tan( 2 \alpha) = \frac{2 \tan \alpha}{4 - \tan^2 \alpha} & \nonumber \\
 & \sin( 3 \alpha) = 3 \sin \alpha - 4 \sin^3 \alpha & \nonumber \\
@@ -46,6 +46,8 @@
 & \sin( \arccos(x)) = \sqrt{1 - x^2}  & \nonumber \\
 & \cos( \arcsin(x)) = \sqrt{1 - x ^2} & \nonumber
 \end{flalign}
+
+\sep
 
 \subsubsection{Unit Circle $(\cos(x), \sin(x))$}
 \includegraphics[scale=0.225]{sinus_cosinus}
@@ -116,3 +118,43 @@
 
 \[ L = \int_c^d = \sqrt{1 + f'(x)^2} dx \quad y = f(x), \ x \in [c, d] \]
 
+\sep
+\subsection{Taylor Polynom}
+
+
+\[
+P_{n} = \sum_{k = 0}^{n} \frac{f^{(k)} (x_0)}{k!} (x - x_0)^k 
+\]
+
+\[\ln(1 + x ) = x + O(x^2) \]
+
+\[cos(x) = 1 - \frac{x^2}{2} + O(x^4) \]
+
+\sep
+\subsection{Gleichmässige Stetigkeit}
+
+$f(x) = x^2$ ist stetig, aber nicht gleichmässig stetig \\
+$f(x) = x$ und $f(x) = \sqrt{x}$ sind stetig und gleichmässig stetig.  \\
+
+
+\sep
+\subsection{Gleichmässige Konvergenz}
+\[f_n(x) \text{ konv. gleichmässig}: \limsup \limits_{n \rightarrow \infty} \abs{f(x) - f_n(x)} = 0 \]
+\sep
+\subsection{Fixpunkte $f(x) = x$} 
+
+Definiere $g(x) = f(x) - x$, zeige $g(y) \leq 0$ und $g(z) \geq 0$ \\
+Wenn $f$ stetig ist, benutze Zwischenwertsatz, um zu zeigen $g(x_0) = 0$
+
+\sep
+\subsection{Substitution}
+
+\[ \int \limits_{a}^{b} f(g(x)) dx = \int \limits_{g(a)}^{g(b)} f(u) \frac{du}{g'(x)}\]
+
+\[ \int \limits_{a}^{b} f(g(x)) \cdot g'(x) dx = \int \limits_{g(a)}^{g(b)} f(u) du \]
+
+\begin{equation}\begin{aligned}
+\int_{e}^{\infty} \frac{1}{x \log (x)} \mathrm{d} x &=\lim _{b \rightarrow \infty} \int_{\log (e)}^{\log (b)} \frac{1}{u} \mathrm{d} u \\
+&=\left.\lim _{b \rightarrow \infty} \log (u)\right|_{1} ^{\log (b)} \\
+&=\lim _{b \rightarrow \infty} \log (\log (b))=\infty \nonumber
+\end{aligned}\end{equation}
