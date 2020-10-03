@@ -42,23 +42,23 @@ $a_{k - 1}(x), ..., a_0(x), b(x)$ are continuous functions \\
 \Def Consider linear ODE of order 1: $y' + ay = b $
 \begin{enumerate}
 \item[1.] Solve homogeneous equation $y' + ay = 0$ 
-\item[2.] Find a solution of inhomogeneous equation, s.t. $S_b$ contains $f_0 + f$ where $f \in S$.
+\item[2.] Find a solution of inhomogeneous equation, s.t. $S_b$ contains $f_h + f$ where $f \in S$.
 \end{enumerate}
-\Bem The solutions are given by $f_0 + z f_1$, where $z \in \C$ and $f_1$ is a basis of $S$ \\
-\Bem To solve the real value problem $f(x_0) = y_0$, one can solve $f_0(x_0) + z f_1(x_0) = y_0$ \\
-\Bem If $a \in \R$, then there exists $f_0, f_1 \in \R$ \\
+\Bem The solutions are given by $f_h + z f_1$, where $z \in \C$ and $f_1$ is a basis of $S$ \\
+\Bem To solve the real value problem $f(x_0) = y_0$, one can solve $f_h(x_0) + z f_1(x_0) = y_0$ \\
+\Bem If $a \in \R$, then there exists $f_h, f_1 \in \R$ \\
 
 \sep
 
 \Procedure Solving homogeneous equations
-\[ f_0(x) = z \cdot e^{-A(x)} \text{ for } z \in \C\]
+\[ f_h(x) = z \cdot e^{-A(x)} \text{ for } z \in \C\]
 
 \sep
 
 \Procedure Solving inhomogeneous equations
 \begin{align*}
 f_p(x) &= \int b(x) \cdot e^{A(x)} dx \cdot e^{-A(x)} \\
-f(x) &= f_0(x) + f_p(x) \\
+f(x) &= f_h(x) + f_p(x) \\
 &= z \cdot e^{-A(x)} + \int b(x) \cdot e^{A(x)} dx \cdot e^{-A(x)}
 \end{align*}
 \sep
@@ -93,3 +93,40 @@ Every solution for the ODE is of the form:
 \textbf{Case 2:} $\exists \alpha$, which is a root of order $2 \leq j \leq k$
 \[ f_{\alpha, 0}(x) = x^0 e^{\alpha x}, \cdots, f_{\alpha, j - 1}(x) = x^{j - 1}  e^{\alpha x}\]
 Taking the union of the functions $f_{\alpha, j}$ for all roots of P, each with its multiplicity, gives a basis of the space of solutions. 
+
+\sep
+
+\Procedure Solving inhomogeneous equations: \\
+Find a solution of inhomogeneous equation, s.t. $S_b$ contains $f_h + f$ where $f \in S$.
+
+\sep
+\Procedure Variation of Constants \\
+Let $(f_1, f_2, \cdots , f_k)$ be a basis for the $f_h$ \\
+$f_p = z_1(x) f_1(x) + \cdots + z_k(x) f_k(x)$, where
+\[
+\left\{\begin{array}{l}
+z_{1}^{\prime}(x) f_{1}(x)+\cdots+z_{k}^{\prime}(x) f_{k}(x)=0 \\
+z_{1}^{\prime}(x) f_{1}^{\prime}(x)+\cdots+z_{k}^{\prime}(x) f_{k}^{\prime}(x)=0 \\
+\cdots \\
+z_{1}^{\prime}(x) f_{1}^{(k-2)}(x)+\cdots+z_{k}^{\prime}(x) f_{k}^{(k-2)}(x)=0
+\end{array}\right.
+\]
+
+\sep
+
+\Trick Guess the particular solution
+
+\begin{tabular}{ |p{1.8cm}||p{3.85cm}|  }
+\hline
+$b(x)$ & $f_p(x)$\\
+\hline\hline
+$a e^{\alpha x}$ & $k e^{\alpha x}$ \\
+\hline
+$a\sin(\beta x)$ & $k_1  \sin(\beta x) + k_2 \cos(\beta x)$ \\
+$a\cos(\beta x)$ & \\
+\hline
+$a e^{\alpha x} \sin(\beta x)$ & $ e^{\alpha x}  [ k_1 \sin(\beta x) + k_2 \cos(\beta x)]$ \\
+$a e^{\alpha x} \cos(\beta x)$ & \\
+\hline
+\end{tabular}
+\Bem works also for $a = a(x)$, then $k = k(x)$
